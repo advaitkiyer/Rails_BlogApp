@@ -1,0 +1,18 @@
+
+<h3>Create a Blog</h3>
+
+    <%= form_with(model: @blog, url: blogs_path) do |form| %>
+    <div>
+        <%= form.label :title %>
+        <%= form.text_field :title, name:'blog[title]' %>
+    </div>
+
+    <div>
+        <%= form.label :body %>
+        <%= form.text_area :body, name:'blog[body]' %>
+    </div>
+
+    <div>
+        <%= form.submit "Create Blog", name: 'commit' %>
+    </div>
+<% end %>
